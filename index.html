@@ -1,0 +1,477 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link  rel="stylesheet" href="calc.css">
+    </head>
+    <body>
+<div id="a">
+    <div id="c">C</div><br>
+<div id="c">A</div><br>
+<div id="c">L</div><br>
+<div id="c">C</div><br>
+<div id="c">U</div><br>
+<div id="c">L</div><br>
+<div id="c">A</div><br>
+<div id="c">T</div><br>
+<div id="c">O</div><br>
+<div id="c">R</div>
+</div>
+
+                      
+
+   <div id="container1">      
+        <div id="input" ><DIV id="in1"><input type="number" id="my" placeholder="A"  onfocus="setactiveId('my')"></DIV>
+        <div id="in2"><input type="number" id="qw" placeholder="B" onfocus="setactiveId('qw')" ></div></div>
+        <div id="in3"><input id="er" type="number" placeholder="C" onfocus="setactiveId('er')"> </div>    
+    <div class="button">
+        <div class="arth">
+            <button  type="submit" onclick=add() id="b1" ><b>+</b></button>
+            <button type="submit" onclick=substract() id="b1"><b>−</b></button>
+            <button type="submit" onclick=multi() id="b1"><b>×</b></button>
+            <button type="submit" onclick=div() id="b1"><b> ÷</b></button>
+        </div>
+        
+        
+           <div id="po">
+            <button type="submit" onclick=power() id="b9"><b> x^y</b></button>
+            <button type="submit" onclick=root1() id="b9"><b>x^(1/y)</b></button>
+           </div>
+
+
+            <div id="pow">
+                <button type="submit" onclick=square() id="b4"><b>x²</b></button>
+                <button type="submit" onclick=ten() id="b4" ><b>x³</b></button>
+                <button type="submit" onclick=sqroot() id="b4"><b>√</b></button>
+                <button type="submit" onclick=root() id="b4"><b>∛</b></button> 
+            </div>
+           
+
+            <div>
+              <div class="tri">
+                <button type="submit" onclick=sinf() id="b2"><b>sin</b></button>
+                <button type="submit" onclick=cosf() id="b2"><b>cos</b></button>
+                <button type="submit" onclick=tanf() id="b2"><b>tan</b></button>
+                <button type="submit" onclick=cosecf() id="b2"><b>cosec</b></button>
+                <button type="submit" onclick=secf() id="b2"><b>sec</b></button>
+                <button type="submit" onclick=cotf() id="b2"><b>cot</b></button>
+              </div>
+              <div class="log">
+                <button type="submit" onclick=logf() id="b3"><b>log</b></button>
+                <button type="submit" onclick=lnf() id="b3"><b>ln</b></button>
+                <button type="submit" onclick="ex()"  id="b3"><b>e^x</b></button>
+                <button type="submit" id="b3" onclick="anlog()"><b>antilog</b></button>
+              </div>  
+            </div>
+    </div> 
+    
+        <div id="all">
+            <div id="func">
+                <div id="bu1"><button id="clearButton" class="b" onclick="clr1()"><b>CLEAR A</b></button>  </div> 
+                <div id="bu2"><button id="clearbutton" class="b" onclick="clr2()"><b>CLEAR B</b></button></div>
+                <div id="bu6"><button id="clearbbutton" class="b" onclick="clr3()"><b>CLEAR C</b></button></div>
+                <div id="bu4"><button onclick=divva() class="b"><b>RESULT1 TO A</b></button></div>
+                <div id="bu5"><button onclick=divvaa() class="b"><b>RESULT1 TO B</b></button></div>
+                <div id="bu7"><button onclick=divvaaa() class="b"><b>RESULT1 TO C</b></button></div>
+                <div id="bu4"><button onclick=ch1() class="b"><b>RESULT2 TO A</b></button></div>
+                <div id="bu5"><button onclick=ch2() class="b"><b>RESULT2 TO B</b></button></div>
+                <div id="bu7"><button onclick=ch3() class="b"><b>RESULT2 TO C</b></button></div>
+            </div>
+                <div id="ac">    
+                <div id="bu3"><button id="allclear" onclick="re()"><b>AC</b></button></div>
+        </div>
+
+    
+    </div>
+    
+        
+
+    
+        
+       
+            
+                
+       <div id="l1"></div>
+       <div id="l2"></div>
+       <div id="l3"></div>        
+       <div id="l4"></div>
+       <div id="l5"></div>
+
+        
+        <div id ="result" aria-placeholder="result"><font size="3px" >use A and B for the operations below ↓</font><BR><font size="1px" align="center">(input the values and click the required operation)</font></div>
+        <div id ="result2" aria-placeholder="result" ><font size="3px" >use C for the operations below ↓</font><br><font size="1px" align="center" >(input the value and click the required operation)</font> </div>
+</div>
+
+    
+
+
+</div>
+        <div id="pq">
+            <div id="frame">
+                <div id="right">
+                    <div id="ri"><button id="p" onclick="appendToInput(1 )"><b>1</b></button>
+                        <button id="p" onclick="appendToInput(2 )"><b>2</b></button>
+                        <button id="p" onclick="appendToInput(3 )"><b>3</b></button>
+                        <button id="p" onclick="appendToInput(4 )"><b>4</b></button>
+                        <button id="p" onclick="appendToInput(5 )"><b>5</b></button>
+                        <button id="p" onclick="appendToInput(6 )"><b>6</b></button>
+                        <button id="p" onclick="appendToInput(7 )"><b>7</b></button>
+                        <button id="p" onclick="appendToInput(8)"><b>8</b></button>
+                        <button id="p" onclick="appendToInput(9 )"><b>9</b></button></div>
+                        <div class="zero"><button id="p" onclick="appendToInput(0 )"><b>0</b></button></div> 
+                </div>   
+                   
+        
+        
+    
+            </div>
+        </div>
+           
+
+       
+
+
+
+
+
+
+        <script lang="javascript">
+        
+
+
+
+       
+
+
+
+            function add()
+            {
+            let x=document.getElementById("my").value;
+            let y=document.getElementById("qw").value;
+            let z;
+            let a=parseFloat(x);
+            let b=parseFloat(y);
+            z= a+b;
+            let result=parseFloat(z);
+            
+            document.getElementById("result").textContent=result;
+            console.log(result);
+
+            };
+            function substract()
+            {
+            let x=document.getElementById("my").value;
+            let y=document.getElementById("qw").value;
+            let z;
+            let a=parseFloat(x);
+            let b=parseFloat(y);
+            z= a-b;
+            let result=parseFloat(z);
+            
+            document.getElementById("result").textContent=result;
+            console.log(result);
+            };
+            function multi()
+            {
+                let x=document.getElementById("my").value;
+            let y=document.getElementById("qw").value;
+            let z;
+            let a=parseFloat(x);
+            let b=parseFloat(y);
+            z= a*b;
+            let result=parseFloat(z);
+            
+            document.getElementById("result").textContent=result;
+            console.log(result);
+            };
+            function div()
+            {
+                let x=document.getElementById("my").value;
+                let y=document.getElementById("qw").value;
+                let z;
+                let a=parseFloat(x);
+                let b=parseFloat(y);
+                z= a/b;
+                let result=parseFloat(z);
+            
+            document.getElementById("result").textContent=result;
+            console.log(result);
+            };
+            function square()
+            {
+                let x=document.getElementById("er").value;
+                //let y=getDocumentElementById().value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                z=a**2;
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+
+            }
+            function power()
+            {
+                let x=document.getElementById("my").value;
+                let y=document.getElementById("qw").value;
+                let a=parseFloat(x);
+                let b=parseFloat(y);
+                let z=Math.pow(a,b);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result").textContent=result;
+            }
+            /*function me()
+            {
+                document.write("First coloumn for integer value.Second coloumn for power");
+            }*/
+            function sqroot()
+            {
+                let x=document.getElementById("er").value;
+               // let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                z=Math.sqrt(a);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+            function sinf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                let i=(a*(Math.PI/180));
+                let j=parseFloat(i);
+                z=Math.sin(j);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+            function cosf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                let i=(a*(Math.PI/180));
+                let j=parseFloat(i);
+                z=Math.cos(j);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+            function tanf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                let i=(a*(Math.PI/180));
+                let j=parseFloat(i);
+                z=Math.tan(j);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+            /*function appendToInput()
+            {
+               let c= document.getElementById("result");
+               let d=parseFloat(c);
+                document.getSelection("my").d;
+            }*/
+            function secf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                let i=(a*(Math.PI/180));
+                let j=parseFloat(i);
+                z=Math.sin(j);
+                let sec=1/z;
+                let result=parseFloat(sec);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+            function cosecf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                let i=(a*(Math.PI/180));
+                let j=parseFloat(i);
+                z=Math.cos(j);
+                let cosec=1/z
+                let result=parseFloat(cosec);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+            function cotf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                let i=(a*(Math.PI/180));
+                let j=parseFloat(i);
+                z=Math.tan(j);
+                let cot=1/z;
+                let result=parseFloat(cot);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+
+            }
+            function logf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                z=Math.log10(a);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+            function lnf()
+            {
+                let x=document.getElementById("er").value;
+                //let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                z=Math.log(a);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;
+            }
+                function root()
+            {
+                let x=document.getElementById("er").value;
+               // let y=documnet.getElementById("qw").value;
+                let a=parseFloat(x);
+                //let b=parseFloat(y);
+                let z;
+                z=Math.cbrt(a);
+                let result=parseFloat(z);
+                console.log(result);
+                document.getElementById("result2").textContent=result;   
+            }
+          
+           function re()
+           {
+            document.getElementById('result').innerHTML='<font size="3px">use A and B for the operations below ↓</font><BR><font size="1px">(input the values and click the required operation)</font>';
+            document.getElementById('result2').innerHTML='<font size="3px">use C for the operations below ↓</font><br><font size="1px">(input the value and click the required operation)</font>';
+            document.getElementById('er').value='';
+            document.getElementById('my').value='';
+            document.getElementById('qw').value='';
+        }
+    function clr1(){
+        document.getElementById('my').value='';
+        }
+    function clr2(){
+            document.getElementById('qw').value='';}
+    function clr3(){
+            document.getElementById('er').value='';}
+            function divva()
+            {
+            let divValue=document.getElementById('result').innerHTML;
+            let dv=parseFloat(divValue);
+            document.getElementById('my').value=dv;
+            }
+            function divvaa()
+            {
+            let divValue=document.getElementById('result').innerHTML;
+            let dv=parseFloat(divValue);
+            document.getElementById('qw').value=dv;
+            }
+
+        function ex(){
+            let x=document.getElementById('er').value;
+            let a=parseFloat(x);
+            let z=Math.exp(a);
+            document.getElementById('result2').textContent=z; 
+        }
+
+        function anlog(){
+            let x=document.getElementById('er').value;
+            let a=parseFloat(x);
+            let z=Math.pow(10,x);
+            document.getElementById('result2').textContent=z; 
+        }
+        function divvaaa()
+        {
+            let x=document.getElementById("result").textContent;
+            let dv=parseFloat(x);
+            document.getElementById('er').value=dv;
+        }
+
+        var activeInputId = 'my';
+
+  
+
+function setactiveId(inputId) {
+  activeInputId = inputId;
+}
+
+function appendToInput(value) {
+  var inputElement = document.getElementById(activeInputId);
+  
+    
+    inputElement.value += value;
+    }
+  
+
+        function ch1(){
+            let x=document.getElementById('result2').innerHTML;
+            let dv=parseFloat(x);
+            document.getElementById('my').value=dv;
+        }
+        function ch2(){
+            let x=document.getElementById('result2').innerHTML;
+            let dv=parseFloat(x);
+            document.getElementById('qw').value=dv;
+        }
+
+        function ch3(){
+            let x=document.getElementById('result2').innerHTML;
+            let dv=parseFloat(x);
+            document.getElementById('er').value=dv;
+        }
+        function root1() {
+            let x=document.getElementById('my').value;
+            let y=document.getElementById('qw').value;
+            let a=parseFloat(x);
+            let b=parseFloat(y);
+            let z;
+            z=Math.pow(a,(1/b));
+            console.log(z);
+            let result =parseFloat(z);
+            document.getElementById('result').textContent=result;
+        }
+        function ten(){
+            let x=document.getElementById('er').value;
+            let a=parseFloat(x);
+            let z;
+            z=Math.pow(a,3);
+            console.log(z);
+            let result =parseFloat(z);
+            document.getElementById('result2').textContent=result;
+        }
+
+
+
+        </script>
+    </body>
+</html>
