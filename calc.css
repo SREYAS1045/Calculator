@@ -506,3 +506,9 @@ body{
     width: 7rem;
     background-color: grey;
 }
+@media only screen and (max-width:600px){
+    body{
+        font-size: 14px;
+        
+    }
+}
