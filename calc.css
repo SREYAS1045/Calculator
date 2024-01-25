@@ -508,9 +508,50 @@ body{
 }
 @media only screen and (max-width:600px){
     body{
-        font-size: 14px;
+        font-size: 14px;}
         #full{
             width:fit-content;
+        }
+            #frame{
+                display: none;
+
+            }
+            #pq
+            {
+                display: none;
+
+            }
+            #right{
+                display: none;
+            }
+            #ri
+            {
+                display: none;
+            }
+            #p
+            {
+                display: none;
+            }
+            #l1
+            {
+                display: none;
+            }
+            #l2
+            {
+                display: none;
+            }
+            #l3
+            {
+                display: none;
+            }
+            #l4
+            {
+                display: none;
+            }
+            #l5
+            {
+                display: none;
+            }
         }
     }
 }
