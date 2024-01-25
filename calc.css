@@ -507,37 +507,41 @@ body{
     background-color: grey;
 }
 @media only screen and (max-width:600px){
-    body{
+    
+    
+            body{
         font-size: 14px;}
        
         
             #frame{
                 display: none;
+                visibility: hidden;
 
             }
             #pq
             {
                 display: none;
+                visibility: hidden;
             }
             #l1
             {
-                display: none;
+                display: none;visibility: hidden;
             }
             #l2
             {
-                display: none;
+                display: none;visibility: hidden;
             }
             #l3
             {
-                display: none;
+                display: none;visibility: hidden;
             }
             #l4
             {
-                display: none;
+                display: none;visibility: hidden;
             }
             #l5
             {
-                display: none;
+                display: none;visibility: hidden;
             }
         }
     
