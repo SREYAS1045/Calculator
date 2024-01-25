@@ -509,26 +509,13 @@ body{
 @media only screen and (max-width:600px){
     body{
         font-size: 14px;}
-        #full{
-            width:fit-content;
-        }
+       
+        
             #frame{
                 display: none;
 
             }
             #pq
-            {
-                display: none;
-
-            }
-            #right{
-                display: none;
-            }
-            #ri
-            {
-                display: none;
-            }
-            #p
             {
                 display: none;
             }
