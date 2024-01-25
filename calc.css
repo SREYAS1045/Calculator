@@ -510,7 +510,7 @@ body{
     body{
         font-size: 14px;
         #full{
-            width:100%;
+            width:fit-content;
         }
     }
 }
